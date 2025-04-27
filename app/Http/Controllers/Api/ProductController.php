@@ -26,7 +26,7 @@ class ProductController extends Controller
             'stok' => 'required|integer',
         ]);
 
-        $product = Product::create($validated);  // Menyimpan produk baru ke database
+        $product = Product::create($validated);
         return response()->json([
             'message' => 'Produk berhasil ditambahkan',
             'product' => $product
